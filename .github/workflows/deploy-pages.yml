@@ -36,7 +36,7 @@ jobs:
           VITE_DEMO_MODE: ${{ vars.VITE_API_URL == '' && 'true' || 'false' }}
           VITE_USE_HASH_ROUTER: "true"
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: frontend/dist
 
