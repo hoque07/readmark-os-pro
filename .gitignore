@@ -1,0 +1,44 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+
+# Environment files
+.env
+.env.*
+!.env.example
+!frontend/.env.example
+!backend/.env.example
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Backend
+backend/.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/.pytest_cache/
+backend/data/*.db
+backend/data/*.sqlite*
+backend/uploads/*
+!backend/uploads/.gitkeep
+!backend/data/.gitkeep
+
+# Python
+*.py[cod]
+*.egg-info/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+
+# Project-local package caches (keeps large downloads off the system drive)
+.cache/

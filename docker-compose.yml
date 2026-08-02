@@ -1,0 +1,20 @@
+services:
+  readmark:
+    build:
+      context: .
+      args:
+        VITE_API_URL: /api
+    ports:
+      - "8000:8000"
+    environment:
+      SECRET_KEY: local-docker-change-before-production
+      ADMIN_EMAIL: admin@example.com
+      ADMIN_PASSWORD: ChangeMe123!
+      SEED_DEMO_DATA: "true"
+      SERVE_FRONTEND: "true"
+      DATABASE_URL: sqlite:///./data/readmark.db
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-5-mini}
+    volumes:
+      - ./backend/data:/app/backend/data
+      - ./backend/uploads:/app/backend/uploads

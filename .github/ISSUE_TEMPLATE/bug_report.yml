@@ -1,0 +1,39 @@
+name: Bug report
+description: Report a reproducible problem in ReadMark OS
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve ReadMark OS. Do not include credentials or private reading data.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      placeholder: "1. Open…\n2. Select…\n3. See…"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options: [GitHub Pages demo, Frontend, FastAPI backend, Windows setup, Deployment]
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Windows 11, Chrome 140, local or deployed URL
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional context
+      description: Add sanitized logs or screenshots if useful.

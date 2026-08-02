@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "ReadMark: Backend",
+      "type": "shell",
+      "command": "${workspaceFolder}\\backend\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"],
+      "options": { "cwd": "${workspaceFolder}/backend" },
+      "problemMatcher": []
+    },
+    {
+      "label": "ReadMark: Frontend",
+      "type": "npm",
+      "script": "dev",
+      "path": "frontend",
+      "problemMatcher": [],
+      "isBackground": true
+    },
+    {
+      "label": "ReadMark: Start Full Stack",
+      "dependsOrder": "parallel",
+      "dependsOn": ["ReadMark: Backend", "ReadMark: Frontend"],
+      "problemMatcher": []
+    }
+  ]
+}
