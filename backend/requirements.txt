@@ -8,6 +8,6 @@ PyJWT>=2.10,<3.0
 python-multipart>=0.0.20,<1.0
 email-validator>=2.2,<3.0
 openai>=1.70
-psycopg[binary]>=3.2,<4.0
+psycopg[binary]>=3.3.4,<4.0
 httpx>=0.28,<1.0
 pytest>=8.3,<9.0
